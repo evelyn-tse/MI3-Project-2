@@ -33,6 +33,7 @@
 - OUTPUT
   - Output.pdf 
 - SCRIPTS
+  - Airports.Rmd
   - Logistic_Regressionv1.ipnyb 
 - LICENSE.md
 - README.md
@@ -44,7 +45,8 @@
 3. Combine All Data - We created a master  Google Sheet called "Airports2023.xslx" and copy and pasted all data into this file. We used copy and paste because there is too much data to use built in merge features.
 4. Create Day of the Week Column - We added a new column into the master datasheet called "day_of_week" next to the FL_DATE column and ran the following formula on each cell: =TEXT([Corresponding FL_DATE row], "dddd"). Example use is =TEXT(A3, "dddd").
 5. Create Airport Column - We added a new column into the master datasheet called "ORIGIN_CODE" next to the "ORIGIN" column and ran the following formula on each cell: =IF([Corresponding ORIGIN row]="ATL", 1, IF([Corresponding ORIGIN row]="DFW", 2, IF([Corresponding ORIGIN code]="ORD", 3, ""))). Example use is =IF(D6="ATL", 1, IF(D6="DFW", 2, IF(D6="ORD", 3, "")))
-6. Run Logistic Regression - Set up Jupyter Notebook and run the "Logistic_Regressionv1.ipynb" file to see the results of logistic regression. 
+6. Create Graphs - Set up RStudio and run the "Airports.RMD" file to create graphs based on the average flight delay by day of the week.
+7. Run Logistic Regression - Set up Jupyter Notebook and run the "Logistic_Regressionv1.ipynb" file to see the results of logistic regression. 
 
 ### References
 [1]	U.S. Department of Transportation. (n.d.). OST_R: BTS: Transtats. Available: https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr [Accessed Feb. 29, 2024]. 

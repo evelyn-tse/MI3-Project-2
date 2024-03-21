@@ -1,0 +1,88 @@
+---
+title: "FlightDelays"
+output: html_document
+date: '2024-03-14'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(kableExtra)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+# ATL Average Departure Delay by Day of the Week
+data <- data.frame(
+  Day = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"),
+  Avg_Dep_Delay = c(14.109375, 14.62206835, 19.0794702, 30.18922984, 20.11429382, 9.906021384, 7.558184765)
+)
+
+# Plot the data using ggplot2
+ggplot(data, aes(x = Day, y = Avg_Dep_Delay)) +
+  geom_point(size = 3, color = "blue") +
+  geom_line(color = "red") +  # Add a line connecting the points
+  labs(title = "ATL Average Departure Delay by Day of the Week",
+   	x = "Day of the Week",
+   	y = "Average Departure Delay (minutes)") +
+  theme_minimal() +  # Set a minimalistic theme
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+```
+
+```{r pressure, echo=FALSE}
+
+# DFW Average Departure Delay by Day of the Week
+data <- data.frame(
+  Day = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"),
+  Avg_Dep_Delay = c(14.109375, 14.62206835, 19.0794702, 30.18922984, 20.11429382, 9.906021384, 7.558184765)
+)
+
+# Plot the data using ggplot2
+ggplot(data, aes(x = Day, y = Avg_Dep_Delay)) +
+  geom_point(size = 3, color = "blue") +
+  geom_line(color = "red") +  # Add a line connecting the points
+  labs(title = "ATL Average Departure Delay by Day of the Week",
+   	x = "Day of the Week",
+   	y = "Average Departure Delay (minutes)") +
+  theme_minimal() +  # Set a minimalistic theme
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r pressure, echo=FALSE}
+
+# ORD Average Departure Delay by Day of the Week
+data <- data.frame(
+  Day = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"),
+  Avg_Dep_Delay = c(10.9, 17.3, 21.1, 25.3, 10.5, 8.6, 6.5)
+)
+
+# Plot the data using ggplot2
+ggplot(data, aes(x = Day, y = Avg_Dep_Delay)) +
+  geom_point(size = 3, color = "blue") +
+  geom_line(color = "red") +  # Add a line connecting the points
+  labs(title = "DFW Average Departure Delay by Day of the Week",
+   	x = "Day of the Week",
+   	y = "Average Departure Delay (minutes)") +
+  theme_minimal() +  # Set a minimalistic theme
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
