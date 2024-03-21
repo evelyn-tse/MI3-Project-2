@@ -46,6 +46,8 @@
 5. Create Airport Column - We added a new column into the master datasheet called "ORIGIN_CODE" next to the "ORIGIN" column and ran the following formula on each cell: =IF([Corresponding ORIGIN row]="ATL", 1, IF([Corresponding ORIGIN row]="DFW", 2, IF([Corresponding ORIGIN code]="ORD", 3, ""))). Example use is =IF(D6="ATL", 1, IF(D6="DFW", 2, IF(D6="ORD", 3, "")))
 6. Create Graphs - Set up RStudio and run the "Airports.RMD" file to create graphs based on the average flight delay by day of the week.
 7. Run Logistic Regression - Set up Jupyter Notebook and run the "Logistic_Regressionv1.ipynb" file to see the results of logistic regression. 
+8. Analyze Results - Use data, tables, and graphs to compare delays across airports and day of the week to understand the trends of 
+flight delays. 
 
 ### References
 [1]	U.S. Department of Transportation. (n.d.). OST_R: BTS: Transtats. Available: https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr [Accessed Feb. 29, 2024]. 
