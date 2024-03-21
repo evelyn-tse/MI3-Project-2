@@ -40,8 +40,8 @@
 1. Gather Raw Data – We secured a complete dataset of all airport departures from the U.S. Department of Transportaion [1] by downloading a dataset for each month. This data is located in the DATA folder. 
 2. Filter Out Airports - For each data file, we went in and removed all rows where the ORIGIN column was not DTW, ATL, or ORD. We used Google Sheet's built in sort features to do so. 
 3. Combine All Data - We created a master  Google Sheet called "Airports2023.xslx" and copy and pasted all data into this file. We used copy and paste because there is too much data to use built in merge features.
-4. Create Day of the Week Column - We added a new column into the master datasheet called "day_of_week" next to the FL_DATE column and ran the following formula on each sell: =TEXT([Corresponding FL_DATE row], "dddd"). Example use is =TEXT(A3, "dddd").
-5. Create Airport Column - ??????????
+4. Create Day of the Week Column - We added a new column into the master datasheet called "day_of_week" next to the FL_DATE column and ran the following formula on each cell: =TEXT([Corresponding FL_DATE row], "dddd"). Example use is =TEXT(A3, "dddd").
+5. Create Airport Column - We added a new column into the master datasheet called "ORIGIN_CODE" next to the "ORIGIN" column and ran the following formula on each cell: =IF([Corresponding ORIGIN row]="ATL", 1, IF([Corresponding ORIGIN row]="DFW", 2, IF([Corresponding ORIGIN code]="ORD", 3, ""))). Example use is =IF(D6="ATL", 1, IF(D6="DFW", 2, IF(D6="ORD", 3, "")))
 6. INSERT OTHER METHODS HERE
 
 ### References
