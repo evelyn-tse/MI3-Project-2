@@ -9,9 +9,8 @@
     Google Sheets/Excel was used to clean and filter the data. This was chosen because there are 
     built in sort features to filter out the ORIGIN column and allow us to easily add a column 
     based on a formula we created. To analyze the data and create the graphs, RStudio was used 
-    along with the tidyverse, dplyr, ggplot2, and kableExtra libraries. To run logistic regression, 
-    we used Jupyter Notebook to run the code. Windows 11 was the platform used to complete this 
-    analysis. 
+    along with the ggplot2 library. To run logistic regression, we used Jupyter Notebook to run 
+    the code. Windows 11 was the platform used to complete this analysis. 
 
 ## Section 2: A Map of your documentation. 
 
